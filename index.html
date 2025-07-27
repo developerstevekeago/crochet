@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>GreenLeaf Clothing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=YourFont&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=YourFont&display=swap"></noscript>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+  }
+</style>
+</head>
+<body>
+
+    <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Crochet work</a>
+            
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#products">Shop</a>
+                <a href="#discount">Sale</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <div class="header-right">
+                <div class="search-container" style="display: none;">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search products...">
+                </div>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Handmade Crochet Collection</h1>
+                <p>Discover our beautiful handmade crochet items crafted with love and premium yarns. Enjoy 20% off all summer designs this season.</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Products Section -->
+    <section class="section" id="discount">
+        <div class="container">
+            <h2 class="section-title">Hot Deals</h2>
+            <div class="discount-products" id="discountProducts">
+                <!-- Discount products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="products-container" id="productsContainer">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">GreenLeaf</div>
+                    <p>We're committed to sustainable fashion that doesn't compromise on style or quality.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#discount">Sale</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact webmaster</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact" id="contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Green Street, Eco City</p>
+                    <p><i class="fas fa-phone"></i> +254 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@greenleaf.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 GreenLeaf Clothing. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeProductModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="product-modal" id="productModalContent">
+                <!-- Product details will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal-content">
+            <button class="close-modal" id="closeCartModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here by JavaScript -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-outline" id="continueShopping">Continue Shopping</button>
+                <button class="btn" id="checkoutBtn">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeCheckoutModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <form class="checkout-form" id="checkoutForm">
+                <h2 class="form-title">Checkout</h2>
+                
+                <div class="order-summary">
+                    <h3 class="order-summary-title">Order Summary</h3>
+                    <div id="orderSummaryItems">
+                        <!-- Order summary items will be loaded here by JavaScript -->
+                    </div>
+                    <div class="order-summary-item">
+                        <span>Total:</span>
+                        <span id="orderSummaryTotal">$0.00</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address" class="form-label">Delivery Address</label>
+                    <textarea id="address" class="form-input" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes" class="form-label">Order Notes (Optional)</label>
+                    <textarea id="notes" class="form-input" rows="2"></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
